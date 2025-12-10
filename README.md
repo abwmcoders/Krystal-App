@@ -413,10 +413,12 @@ Dialog closes
 
 ## 📝 License
 
-This project is private and for portfolio purposes.
+This project is public and for portfolio purposes.
 
 ## 🔗 Resources
 
+- [Apk Link](https://drive.google.com/file/d/1fI4IeamkIAvi-ge5IiTL5l0o_qybvGDk/view?usp=sharing)
+- [Design Inspiration](https://www.figma.com/community/file/1124394532783501567)
 - [Flutter Documentation](https://docs.flutter.dev/)
 - [Riverpod Documentation](https://riverpod.dev/)
 - [Hive Documentation](https://docs.hive.im/)

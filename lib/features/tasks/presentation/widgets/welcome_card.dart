@@ -85,7 +85,7 @@ class _WelcomeCardState extends ConsumerState<WelcomeCard> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Hi Themade 👋',
+                    'Hi, Welcome 👋',
                     style: GoogleFonts.montserrat(
                       color: Colors.white,
                       fontSize: ResponsiveUtils.responsiveFontSize(context, mobile: 28, tablet: 32, desktop: 36),
