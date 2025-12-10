@@ -2,7 +2,6 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import '../../../../config/responsive/responsive_utils.dart';
 import '../provider/loading_provider.dart';
@@ -23,7 +22,9 @@ class CustomDialogDeleteTodo extends ConsumerWidget {
         canPop: !isLoading,
         child: AlertDialog(
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(ResponsiveUtils.responsiveSize(context, mobile: 20, tablet: 24, desktop: 28)),
+            borderRadius: BorderRadius.circular(
+              ResponsiveUtils.responsiveSize(context, mobile: 20, tablet: 24, desktop: 28),
+            ),
           ),
           title: Column(
             children: [
@@ -36,9 +37,7 @@ class CustomDialogDeleteTodo extends ConsumerWidget {
                   color: Colors.white,
                 ),
                 child: isLoading
-                    ? const CircularProgressIndicator(
-                        valueColor: AlwaysStoppedAnimation<Color>(Colors.red),
-                      )
+                    ? const CircularProgressIndicator(valueColor: AlwaysStoppedAnimation<Color>(Colors.red))
                     : Icon(
                         Icons.delete_sweep_outlined,
                         color: Colors.red,
@@ -48,7 +47,8 @@ class CustomDialogDeleteTodo extends ConsumerWidget {
               SizedBox(height: ResponsiveUtils.responsiveSize(context, mobile: 12, tablet: 14, desktop: 16)),
               Text(
                 'Delete Task',
-                style: GoogleFonts.montserrat(
+                style: TextStyle(
+                  fontFamily: 'Lato',
                   fontSize: ResponsiveUtils.responsiveFontSize(context, mobile: 20, tablet: 22, desktop: 24),
                   fontWeight: FontWeight.bold,
                   color: const Color.fromARGB(255, 143, 128, 128),
@@ -59,7 +59,8 @@ class CustomDialogDeleteTodo extends ConsumerWidget {
           content: Text(
             content,
             textAlign: TextAlign.center,
-            style: GoogleFonts.montserrat(
+            style: TextStyle(
+              fontFamily: 'Lato',
               fontSize: ResponsiveUtils.responsiveFontSize(context, mobile: 14, tablet: 15, desktop: 16),
               fontWeight: FontWeight.w500,
               color: const Color(0xff9C9A9A),
@@ -71,20 +72,24 @@ class CustomDialogDeleteTodo extends ConsumerWidget {
               onPressed: isLoading ? null : () => Navigator.of(context).pop(),
               child: Text(
                 "Cancel",
-                style: GoogleFonts.montserrat(
+                style: TextStyle(
+                  fontFamily: 'Lato',
                   fontSize: ResponsiveUtils.responsiveFontSize(context, mobile: 15, tablet: 15.5, desktop: 16),
                   color: isLoading ? Colors.grey : null,
                 ),
               ),
             ),
             TextButton(
-              onPressed: isLoading ? null : () {
-                onPressedDelete?.call();
-                Navigator.of(context).pop();
-              },
+              onPressed: isLoading
+                  ? null
+                  : () {
+                      onPressedDelete?.call();
+                      Navigator.of(context).pop();
+                    },
               child: Text(
                 isLoading ? "Deleting..." : "Delete",
-                style: GoogleFonts.montserrat(
+                style: TextStyle(
+                  fontFamily: 'Lato',
                   fontSize: ResponsiveUtils.responsiveFontSize(context, mobile: 15, tablet: 15.5, desktop: 16),
                   color: isLoading ? Colors.grey : Colors.red,
                 ),
@@ -96,4 +101,3 @@ class CustomDialogDeleteTodo extends ConsumerWidget {
     );
   }
 }
-

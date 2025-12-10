@@ -266,7 +266,9 @@ flutter build web
 | `flutter_riverpod` | ^2.6.1 | State management |
 | `hive` | ^2.2.3 | Local database |
 | `hive_flutter` | ^1.1.0 | Flutter integration |
-| `google_fonts` | ^6.3.3 | Typography |
+| `lottie` | ^3.3.2 | Animations |
+| `uuid` | ^4.5.2 | Task ID generation |
+| `path_provider` | ^2.1.5 | File system paths |
 
 ## 🧪 Testing the Application
 

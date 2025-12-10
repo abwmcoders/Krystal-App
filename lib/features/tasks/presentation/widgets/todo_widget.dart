@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import '../../../../config/responsive/responsive_utils.dart';
 import '../provider/loading_provider.dart';
@@ -81,7 +80,8 @@ class TodoWidget extends ConsumerWidget {
                     title,
                     maxLines: isMobile ? 1 : 2,
                     overflow: TextOverflow.ellipsis,
-                    style: GoogleFonts.montserrat(
+                    style: TextStyle(
+                      fontFamily: 'Lato',
                       color: const Color(0xff333333),
                       fontSize: ResponsiveUtils.responsiveFontSize(context, mobile: 16, tablet: 17, desktop: 18),
                       fontWeight: FontWeight.bold,
@@ -93,7 +93,8 @@ class TodoWidget extends ConsumerWidget {
                     description,
                     // maxLines: isMobile ? 1 : 2,
                     // overflow: TextOverflow.ellipsis,
-                    style: GoogleFonts.montserrat(
+                    style: TextStyle(
+                      fontFamily: 'Lato',
                       color: const Color(0xff6C6868),
                       fontSize: ResponsiveUtils.responsiveFontSize(context, mobile: 14, tablet: 14.5, desktop: 15),
                       fontWeight: FontWeight.w500,
@@ -109,7 +110,8 @@ class TodoWidget extends ConsumerWidget {
                         '${startAt != null ? _formatDateTime(startAt!) : ''}${startAt != null && endAt != null ? '  -  ' : ''}${endAt != null ? _formatDateTime(endAt!) : ''}',
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
-                        style: GoogleFonts.montserrat(
+                        style: TextStyle(
+                          fontFamily: 'Lato',
                           color: const Color(0xff9C9A9A),
                           fontSize: ResponsiveUtils.responsiveFontSize(context, mobile: 12, tablet: 12.5, desktop: 13),
                         ),

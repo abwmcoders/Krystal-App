@@ -2,7 +2,6 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import '../../../../config/responsive/responsive_utils.dart';
 import '../../domain/todo.dart';
@@ -168,7 +167,8 @@ class _CustomDialogNewTodoState extends ConsumerState<CustomDialogNewTodo> {
                 ),
                 child: Text(
                   dialogTitle,
-                  style: GoogleFonts.montserrat(
+                  style: TextStyle(
+                    fontFamily: 'Lato',
                     fontSize: ResponsiveUtils.responsiveFontSize(context, mobile: 23, tablet: 25, desktop: 28),
                     color: const Color.fromARGB(255, 143, 128, 128),
                     fontWeight: FontWeight.bold,
@@ -187,7 +187,8 @@ class _CustomDialogNewTodoState extends ConsumerState<CustomDialogNewTodo> {
                   TextField(
                     controller: _titleController,
                     enabled: !isLoading,
-                    style: GoogleFonts.montserrat(
+                    style: TextStyle(
+                      fontFamily: 'Lato',
                       color: const Color.fromARGB(255, 128, 124, 124),
                       fontSize: ResponsiveUtils.responsiveFontSize(context, mobile: 14, tablet: 15, desktop: 16),
                     ),
@@ -199,7 +200,8 @@ class _CustomDialogNewTodoState extends ConsumerState<CustomDialogNewTodo> {
                       ),
                       filled: false,
                       hintText: 'Task title',
-                      hintStyle: GoogleFonts.montserrat(
+                      hintStyle: TextStyle(
+                        fontFamily: 'Lato',
                         color: const Color(0xff9C9A9A),
                         fontSize: ResponsiveUtils.responsiveFontSize(context, mobile: 13, tablet: 14, desktop: 15),
                       ),
@@ -211,7 +213,8 @@ class _CustomDialogNewTodoState extends ConsumerState<CustomDialogNewTodo> {
                     controller: _descController,
                     enabled: !isLoading,
                     maxLines: 3,
-                    style: GoogleFonts.montserrat(
+                    style: TextStyle(
+                      fontFamily: 'Lato',
                       color: const Color.fromARGB(255, 128, 124, 124),
                       fontSize: ResponsiveUtils.responsiveFontSize(context, mobile: 14, tablet: 15, desktop: 16),
                     ),
@@ -223,7 +226,8 @@ class _CustomDialogNewTodoState extends ConsumerState<CustomDialogNewTodo> {
                       ),
                       filled: false,
                       hintText: 'Task description',
-                      hintStyle: GoogleFonts.montserrat(
+                      hintStyle: TextStyle(
+                        fontFamily: 'Lato',
                         color: const Color(0xff9C9A9A),
                         fontSize: ResponsiveUtils.responsiveFontSize(context, mobile: 13, tablet: 14, desktop: 15),
                       ),
@@ -248,7 +252,8 @@ class _CustomDialogNewTodoState extends ConsumerState<CustomDialogNewTodo> {
                         children: [
                           Text(
                             'Start: ${_formatDateTime(_startTime)}',
-                            style: GoogleFonts.montserrat(
+                            style: TextStyle(
+                              fontFamily: 'Lato',
                               color: isLoading ? Colors.grey : const Color(0xff6C6868),
                               fontSize: ResponsiveUtils.responsiveFontSize(
                                 context,
@@ -286,7 +291,8 @@ class _CustomDialogNewTodoState extends ConsumerState<CustomDialogNewTodo> {
                         children: [
                           Text(
                             'End: ${_formatDateTime(_endTime)}',
-                            style: GoogleFonts.montserrat(
+                            style: TextStyle(
+                              fontFamily: 'Lato',
                               color: isLoading ? Colors.grey : const Color(0xff6C6868),
                               fontSize: ResponsiveUtils.responsiveFontSize(
                                 context,
@@ -315,7 +321,8 @@ class _CustomDialogNewTodoState extends ConsumerState<CustomDialogNewTodo> {
               onPressed: isLoading ? null : () => Navigator.of(context).pop(),
               child: Text(
                 "Cancel",
-                style: GoogleFonts.montserrat(
+                style: TextStyle(
+                  fontFamily: 'Lato',
                   fontSize: ResponsiveUtils.responsiveFontSize(context, mobile: 15, tablet: 15.5, desktop: 16),
                   color: isLoading ? Colors.grey : Colors.red,
                 ),
@@ -325,7 +332,8 @@ class _CustomDialogNewTodoState extends ConsumerState<CustomDialogNewTodo> {
               onPressed: isLoading ? null : () async => await _handleSave(ref),
               child: Text(
                 isLoading ? 'Loading...' : (isEditMode ? "Save" : "Create"),
-                style: GoogleFonts.montserrat(
+                style: TextStyle(
+                  fontFamily: 'Lato',
                   fontSize: ResponsiveUtils.responsiveFontSize(context, mobile: 15, tablet: 15.5, desktop: 16),
                   color: isLoading ? Colors.grey : Colors.blue,
                 ),

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import '../../../../config/responsive/responsive_utils.dart';
 import '../provider/todos_provider.dart';
@@ -58,7 +57,8 @@ class EmptyStateWidget extends StatelessWidget {
           // Empty Title
           Text(
             _emptyMessage,
-            style: GoogleFonts.montserrat(
+            style: TextStyle(
+              fontFamily: 'Lato',
               color: const Color(0xff8C8C8C),
               fontSize: ResponsiveUtils.responsiveFontSize(context, mobile: 20, tablet: 22, desktop: 24),
               fontWeight: FontWeight.bold,
@@ -74,7 +74,8 @@ class EmptyStateWidget extends StatelessWidget {
             child: Text(
               _emptySubMessage,
               textAlign: TextAlign.center,
-              style: GoogleFonts.montserrat(
+              style: TextStyle(
+                fontFamily: 'Lato',
                 color: const Color(0xffA0A0A0),
                 fontSize: ResponsiveUtils.responsiveFontSize(context, mobile: 14, tablet: 15, desktop: 16),
                 fontWeight: FontWeight.w500,

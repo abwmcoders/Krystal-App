@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:lottie/lottie.dart';
 
@@ -64,15 +63,15 @@ class _WelcomeCardState extends ConsumerState<WelcomeCard> {
           // Image.asset('assets/images/img_saly10.png'),
           // Lottie.asset('assets/images/todo.lottie'),
           SizedBox(
-  width: 200,  // Adjust as needed
-  height: 200,
-  child: Lottie.asset(
-    'assets/images/todo.json',
-    repeat: true,  // Loop the animation (default is true)
-    reverse: false,  // Play in reverse (default is false)
-    animate: true,  // Start animation automatically (default is true)
-  ),
-),
+            width: 200, // Adjust as needed
+            height: 200,
+            child: Lottie.asset(
+              'assets/images/todo.json',
+              repeat: true, // Loop the animation (default is true)
+              reverse: false, // Play in reverse (default is false)
+              animate: true, // Start animation automatically (default is true)
+            ),
+          ),
           Positioned(
             left: 0,
             bottom: 0,
@@ -86,7 +85,8 @@ class _WelcomeCardState extends ConsumerState<WelcomeCard> {
                 children: [
                   Text(
                     'Hi, Welcome 👋',
-                    style: GoogleFonts.montserrat(
+                    style: TextStyle(
+                      fontFamily: 'Lato',
                       color: Colors.white,
                       fontSize: ResponsiveUtils.responsiveFontSize(context, mobile: 28, tablet: 32, desktop: 36),
                       fontWeight: FontWeight.bold,
@@ -94,7 +94,8 @@ class _WelcomeCardState extends ConsumerState<WelcomeCard> {
                   ),
                   Text(
                     'Your day looks like this:',
-                    style: GoogleFonts.montserrat(
+                    style: TextStyle(
+                      fontFamily: 'Lato',
                       color: Colors.white70,
                       fontSize: ResponsiveUtils.responsiveFontSize(context, mobile: 12, tablet: 13, desktop: 14),
                     ),
@@ -141,7 +142,8 @@ class _WelcomeCardState extends ConsumerState<WelcomeCard> {
                   size: ResponsiveUtils.responsiveSize(context, mobile: 20, tablet: 22, desktop: 24),
                 ),
                 textFieldIconColor: const Color(0xff9C9A9A),
-                style: GoogleFonts.montserrat(
+                style: TextStyle(
+                  fontFamily: 'Lato',
                   color: const Color(0xff9C9A9A),
                   fontSize: ResponsiveUtils.responsiveFontSize(context, mobile: 14, tablet: 15, desktop: 16),
                 ),
@@ -206,7 +208,8 @@ class TasksCounterCard extends StatelessWidget {
                   '$tasksCounter tasks $typeTask',
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
-                  style: GoogleFonts.montserrat(
+                  style: TextStyle(
+                    fontFamily: 'Lato',
                     color: const Color(0xff8C8C8C).withValues(alpha: 0.8),
                     fontSize: ResponsiveUtils.responsiveFontSize(context, mobile: 12, tablet: 12.5, desktop: 13),
                     fontWeight: FontWeight.w500,

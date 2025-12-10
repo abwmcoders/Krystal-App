@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 class AppTheme {
   final _appTheme = ThemeData(
-    useMaterial3: false,
+    useMaterial3: true,
+    fontFamily: 'Lato',
     floatingActionButtonTheme: const FloatingActionButtonThemeData(
       backgroundColor: Color.fromARGB(255, 154, 185, 155),
       foregroundColor: Colors.white,

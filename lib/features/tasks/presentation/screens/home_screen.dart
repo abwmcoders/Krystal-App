@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import '../../../../config/responsive/responsive_utils.dart';
 import '../provider/loading_provider.dart';
@@ -84,7 +83,8 @@ class HomeScreenState extends ConsumerState<HomeScreen> {
               ),
               child: Text(
                 tasksTitleGroup,
-                style: GoogleFonts.arima(
+                style: TextStyle(
+                  fontFamily: 'Lato',
                   color: const Color(0xff8C8C8C),
                   fontSize: ResponsiveUtils.responsiveFontSize(context, mobile: 25, tablet: 28, desktop: 32),
                   fontWeight: FontWeight.bold,
